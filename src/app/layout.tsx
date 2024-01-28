@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import Image from "next/image";
+import { Montserrat } from "next/font/google";
+import { Alice } from "next/font/google";
+import "../styles/globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
+const alice = Alice({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +18,154 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="fr">
+      <body className={`${montserrat.className} custom-body`}>
+        {children}
+        <main className="main">
+          <div className="container">
+            <div className="topBar">
+              <div className="squareButtons">
+                <div className="redSquareButton"></div>
+                <div className="yellowSquareButton"></div>
+                <div className="greenSquareButton"></div>
+              </div>
+              <h1 className={ alice.className }>Visuale Studio Codex <span>(c&apos;est du latin)</span></h1>
+            </div>
+            <div className="leftBar">
+              <div className="iconsTop">
+                <Image
+                  src="/assets/icons/files.png"
+                  width={20}
+                  height={20}
+                  alt="Files icon"
+                />
+                <Image
+                  src="/assets/icons/search.png"
+                  width={20}
+                  height={20}
+                  alt="Files icon"
+                />
+                <Image
+                  src="/assets/icons/source-control.png"
+                  width={20}
+                  height={20}
+                  alt="Files icon"
+                />
+                <Image
+                  src="/assets/icons/debug.png"
+                  width={20}
+                  height={20}
+                  alt="Files icon"
+                />
+                <Image
+                  src="/assets/icons/extensions.png"
+                  width={20}
+                  height={20}
+                  alt="Files icon"
+                />
+              </div>
+              <div className="iconsBot">
+                <Image
+                  src="/assets/icons/account.png"
+                  width={20}
+                  height={20}
+                  alt="Files icon"
+                />
+                <Image
+                  src="/assets/icons/gear.png"
+                  width={20}
+                  height={20}
+                  alt="Files icon"
+                />
+              </div>
+            </div>
+            <div className="filesBar">
+              <div className="filesContainer">
+                <div className="explorateur">
+                  <p>Explorateur</p>
+                  <Image
+                    src="/assets/icons/more.png"
+                    width={20}
+                    height={20}
+                    alt="Files icon"
+                  />
+                </div>
+                <div className="list">
+                  <div className="listHeader">
+                    <Image
+                      src="/assets/icons/chevron-down.png"
+                      width={16}
+                      height={16}
+                      alt="Files icon"
+                    />
+                    <p>Michel-Guelin</p>
+                  </div>
+                  <div className="listItems">
+                    <div className="listItem">
+                      <Image
+                        src="/assets/icons/code.png"
+                        width={16}
+                        height={16}
+                        alt="Files icon"
+                      />
+                      <p>présentation.html</p>
+                    </div>
+                    <div className="listItem">
+                      <Image
+                        src="/assets/icons/diese.png"
+                        width={16}
+                        height={16}
+                        alt="Files icon"
+                      />
+                      <p>projets.css</p>
+                    </div>
+                    <div className="listItem">
+                      <Image
+                        src="/assets/icons/js.png"
+                        width={16}
+                        height={16}
+                        alt="Files icon"
+                      />
+                      <p>contact.js</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <Image
+                src="/assets/images/avatar-debout.png"
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: 'auto', height: '50%', marginBottom: '-6.5px'}}
+                alt="Files icon"
+              />
+            </div>
+            <div className="tabsBar"></div>
+            <div className="headerSection">
+              <div className="title">
+                <h2 className={ alice.className }>Michel GUELIN</h2>
+              </div>
+              <div className="headerIllustration">
+                <Image
+                  src="/assets/images/avatar-assis.png"
+                  width={285.49}
+                  height={206.29}
+                  style={{ marginBottom: '-44.5px' }}
+                  alt="Avatar assis"
+                />
+              </div>
+            </div>
+            <div className="contentSection">
+              <p><span>Développeur front-end</span> passionné et créatif, je suis en alternance à Efrei Paris, une école d’ingénieur.</p>
+
+              <p>J’aime allier mes compétences en développement et ma sensibilité au webdesign pour créer des <span>interfaces qui sortent de l’ordinaire</span>.</p>
+            </div>
+            <div className="botBar">
+              <p>Créé et développé par Michel GUELIN © 2024</p>
+            </div>
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
