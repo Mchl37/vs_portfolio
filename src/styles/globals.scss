@@ -177,6 +177,38 @@ $border-color: #202828;
   grid-area: tabsBar;
   border-bottom: 2px solid $border-color;
   background-color: $background-color-dark !important;
+
+  .tabs {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100% ;
+
+    .tab {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 220px;
+      height: 100% ;
+      padding: 0 1.5rem;
+      gap: 0.5rem;
+      border: 2px solid $border-color;
+      border-radius: 10px 10px 0 0;
+      background-color: $background-color;
+      color: $primary-color;
+      font-size: 0.8rem;
+      cursor: pointer;
+      margin-left: -2px;
+
+      .active {
+        background-color: $secondary-color !important;
+      }
+
+      p {
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 
 .headerSection {
