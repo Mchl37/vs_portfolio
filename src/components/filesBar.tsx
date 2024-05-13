@@ -57,14 +57,15 @@ function FilesBar() {
           </div>
         </div>
       </div>
-      <Image
-        src="/assets/images/avatar-debout-cropped.png"
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{ width: 'auto', height: '50%'}}
-        alt="Files icon"
-      />
+      <div className="filesBarIllustration">
+        <Image
+          src="/assets/images/avatar-debout-cropped.png"
+          width={0}
+          height={0}
+          sizes="100vw"
+          alt="Files icon"
+        />
+      </div>
     </div>
   )
 }

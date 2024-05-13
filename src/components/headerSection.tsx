@@ -20,7 +20,6 @@ function HeaderSection(props: HeaderSectionProps) {
           src="/assets/images/avatar-assis-cropped.png"
           width={285.49}
           height={206.29}
-          style={{ width: 'auto', height: '7em'}}
           alt="Avatar assis"
         />
       </div>
