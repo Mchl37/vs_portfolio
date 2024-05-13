@@ -17,10 +17,10 @@ function HeaderSection(props: HeaderSectionProps) {
       </div>
       <div className="headerIllustration">
         <Image
-          src="/assets/images/avatar-assis.png"
+          src="/assets/images/avatar-assis-cropped.png"
           width={285.49}
           height={206.29}
-          style={{ marginBottom: '-44.5px' }}
+          style={{ width: 'auto', height: '7em'}}
           alt="Avatar assis"
         />
       </div>

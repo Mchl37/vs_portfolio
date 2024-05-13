@@ -24,8 +24,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: 4em 12em 1fr;
-  grid-template-rows: 2.5em 2.5em 10em 1fr 2.5em;
+  grid-template-columns: 4em 12em 1fr; /* 4.5% 13.5% 1fr */
+  grid-template-rows: 2.5em 2.5em 18% 1fr 2.5em; /* 5% 5% 20% 1fr 5% */
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: "topBar topBar topBar" "leftBar filesBar tabsBar" "leftBar filesBar headerSection" "leftBar filesBar contentSection" "botBar botBar botBar";
@@ -202,26 +202,25 @@ body {
   border-bottom: 2px solid #202828;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1.5rem;
+  align-items: flex-end;
+  padding: 0 0 0 1.5rem;
 }
 .headerSection .title {
-  width: 70%;
+  width: 80%;
   height: 100%;
   border-right: 2px solid #202828;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 1rem;
 }
 .headerSection .title h2 {
-  font-size: 7vw;
+  font-size: 5vw;
   margin: 0;
 }
 .headerSection .headerIllustration {
+  width: 20%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
 }
 
 .indexContentSection {
@@ -376,5 +375,10 @@ body {
   }
   .tabsBar .tabs .tab p {
     overflow: hidden;
+  }
+}
+@media (max-width: 1440px) {
+  .headerSection .title h2 {
+    font-size: 7vw;
   }
 }/*# sourceMappingURL=globals.css.map */
