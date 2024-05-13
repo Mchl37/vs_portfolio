@@ -163,9 +163,6 @@ body {
 .tabsBar .tabs a:focus, .tabsBar .tabs a:hover, .tabsBar .tabs a:visited, .tabsBar .tabs a:link, .tabsBar .tabs a:active {
   text-decoration: none;
 }
-.tabsBar .tabs a:active {
-  background-color: #F2F2EB;
-}
 .tabsBar .tabs .tab {
   display: flex;
   justify-content: space-between;

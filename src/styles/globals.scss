@@ -150,6 +150,10 @@ body {
   font-size: 0.7rem;
   text-transform: uppercase;
 
+  .filesContainer {
+    width: 90%;
+  }
+
   .explorateur {
     display: flex;
     justify-content: space-between;
@@ -164,9 +168,16 @@ body {
       align-items: center;
       gap: 1px;
       padding: 0 0.2rem;
+      cursor: pointer;
     }
 
     .listItems {
+      display: none;
+
+      &.open {
+        display: block;
+      }
+
       a {
         text-decoration: none;
   

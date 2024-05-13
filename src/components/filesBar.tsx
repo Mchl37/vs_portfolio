@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ListHeader from './listHeader';
+import { useState } from 'react';
 
 function FilesBar() {
+  const [isOpen, setIsOpen] = useState(true);
+
   return (
     <div className="filesBar">
       <div className="filesContainer">
@@ -15,16 +19,8 @@ function FilesBar() {
           />
         </div>
         <div className="list">
-          <div className="listHeader">
-            <Image
-              src="/assets/icons/chevron-down.png"
-              width={16}
-              height={16}
-              alt="Files icon"
-            />
-            <p>Michel-Guelin</p>
-          </div>
-          <div className="listItems">
+          <ListHeader title="Michel-Guelin" isOpen={isOpen} setIsOpen={setIsOpen} />
+          <div className={`listItems${isOpen ? ' open' : ''}`}>
             <Link href={"/"}>
               <div className="listItem">
                 <Image

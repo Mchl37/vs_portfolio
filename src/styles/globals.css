@@ -116,6 +116,9 @@ body {
   font-size: 0.7rem;
   text-transform: uppercase;
 }
+.filesBar .filesContainer {
+  width: 90%;
+}
 .filesBar .explorateur {
   display: flex;
   justify-content: space-between;
@@ -128,6 +131,13 @@ body {
   align-items: center;
   gap: 1px;
   padding: 0 0.2rem;
+  cursor: pointer;
+}
+.filesBar .list .listItems {
+  display: none;
+}
+.filesBar .list .listItems.open {
+  display: block;
 }
 .filesBar .list .listItems a {
   text-decoration: none;
