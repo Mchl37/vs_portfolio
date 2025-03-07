@@ -3,8 +3,8 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: #403F3C;
-  color: #403F3C;
+  background-color: #403f3c;
+  color: #403f3c;
   font-size: 16px;
   line-height: 1.5;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .container > div {
-  background-color: #F2F2EB;
+  background-color: #f2f2eb;
 }
 
 .topBar {
@@ -52,26 +52,26 @@ body {
 .topBar .squareButtons .redSquareButton {
   width: 12px;
   height: 12px;
-  border: 1px solid #0A1216;
-  background-color: #FF605C;
+  border: 1px solid #0a1216;
+  background-color: #ff605c;
   box-shadow: 2px 2px 0 0 #000;
 }
 .topBar .squareButtons .yellowSquareButton {
   width: 12px;
   height: 12px;
-  border: 1px solid #0A1216;
-  background-color: #FFBD44;
+  border: 1px solid #0a1216;
+  background-color: #ffbd44;
   box-shadow: 2px 2px 0 0 #000;
 }
 .topBar .squareButtons .greenSquareButton {
   width: 12px;
   height: 12px;
-  border: 1px solid #0A1216;
-  background-color: #00CA4E;
+  border: 1px solid #0a1216;
+  background-color: #00ca4e;
   box-shadow: 2px 2px 0 0 #000;
 }
 .topBar h1 {
-  color: #F2F2EB;
+  color: #f2f2eb;
   font-size: 1.5rem;
   letter-spacing: 0.04rem;
   margin: 0 auto;
@@ -83,7 +83,7 @@ body {
 .leftBar {
   grid-area: leftBar;
   border-right: 2px solid #202828;
-  background-color: #D9D8D7 !important;
+  background-color: #d9d8d7 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,7 +151,7 @@ body {
   align-items: center;
   gap: 6px;
   padding: 0 0.5rem;
-  color: #403F3C;
+  color: #403f3c;
 }
 .filesBar .filesBarIllustration {
   display: flex;
@@ -164,7 +164,7 @@ body {
 .tabsBar {
   grid-area: tabsBar;
   border-bottom: 2px solid #202828;
-  background-color: #BFBDB8 !important;
+  background-color: #bfbdb8 !important;
 }
 .tabsBar .tabs {
   display: flex;
@@ -190,8 +190,8 @@ body {
   gap: 0.5rem;
   border: 2px solid #202828;
   border-radius: 10px 10px 0 0;
-  background-color: #D9D8D7;
-  color: #403F3C;
+  background-color: #d9d8d7;
+  color: #403f3c;
   font-size: 0.8rem;
   cursor: pointer;
   margin-left: -2px;
@@ -200,7 +200,7 @@ body {
   text-transform: uppercase;
 }
 .tabsBar .tabs .active {
-  background-color: #F2F2EB;
+  background-color: #f2f2eb;
   padding-bottom: 2px !important;
 }
 
@@ -223,6 +223,10 @@ body {
 .headerSection .title h2 {
   font-size: 4.5vw;
   margin: 0;
+  color: #202828;
+}
+.headerSection .title .avatar-mobile {
+  display: none;
 }
 .headerSection .headerIllustration {
   width: 10%;
@@ -246,7 +250,7 @@ body {
   font-size: 2rem;
 }
 .indexContentSection p span {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   height: 50%;
 }
 
@@ -288,7 +292,7 @@ body {
   padding: 0.2rem 0.5rem;
   border: none;
   border-radius: 12px;
-  background: #D9D8D7;
+  background: #d9d8d7;
 }
 
 .contactContentSection {
@@ -312,7 +316,8 @@ body {
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
-.contactContentSection form .form-item input, .contactContentSection form .form-item textarea {
+.contactContentSection form .form-item input,
+.contactContentSection form .form-item textarea {
   padding-bottom: 0.6rem;
   border: none;
   border-bottom: 1px solid rgba(64, 63, 60, 0.5);
@@ -325,8 +330,8 @@ body {
   padding: 0.8rem;
   border: none;
   border-radius: 20px;
-  background: #403F3C;
-  color: #F2F2EB;
+  background: #403f3c;
+  color: #f2f2eb;
   width: 30%;
   margin: 0 auto;
   cursor: pointer;
@@ -343,7 +348,7 @@ body {
   align-items: center;
 }
 .botBar p {
-  color: #F2F2EB;
+  color: #f2f2eb;
   font-size: 1rem;
 }
 
@@ -359,12 +364,17 @@ body {
   }
   .container {
     grid-template-areas: "topBar topBar topBar" "leftBar tabsBar tabsBar" "leftBar headerSection headerSection" "leftBar contentSection contentSection" "botBar botBar botBar";
+    grid-template-columns: 2.8em 23em 1fr;
+    grid-template-rows: 2.5em 2.5em 22% 1fr 2.5em;
+  }
+  .topBar h1 {
+    font-size: 1.2rem;
   }
   .filesBar {
     display: none;
   }
   .headerSection .title {
-    width: 100%;
+    width: 100% !important;
     border-right: none;
     display: flex;
     justify-content: flex-start;
@@ -372,7 +382,26 @@ body {
     padding-left: 0;
   }
   .headerSection .title h2 {
-    font-size: 11vw;
+    font-size: 17vw !important;
+    line-height: 1.2;
+  }
+  .headerSection .title .avatar-mobile {
+    display: block;
+  }
+  .headerSection .title #avatar-mobile-accueil {
+    width: 70%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .headerSection .title #avatar-mobile-projets {
+    width: 40%;
+    height: auto;
+    margin-top: -60px;
+  }
+  .headerSection .title #avatar-mobile-contact {
+    width: 100%;
+    height: auto;
+    margin-top: -60px;
   }
   .headerSection .headerIllustration {
     display: none;
@@ -386,6 +415,18 @@ body {
   }
   .tabsBar .tabs .tab p {
     overflow: hidden;
+  }
+  .indexContentSection {
+    padding: 0 1.5rem;
+  }
+  .projetsContentSection .card .card-left {
+    width: 40rem;
+  }
+  .contactContentSection form {
+    width: 78%;
+  }
+  .botBar p {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 1440px) {
